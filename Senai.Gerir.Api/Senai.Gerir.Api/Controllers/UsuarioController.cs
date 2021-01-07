@@ -55,7 +55,7 @@ namespace Senai.Gerir.Api.Controllers
                 var token = GerarJsonWebToken(usuarioexiste);
 
                 //retorna sucesso com o Token do Usuário
-                return Ok(token);
+                return Ok(new { token = token});
             }
             catch (System.Exception ex)
             {
